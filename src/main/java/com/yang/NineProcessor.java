@@ -36,10 +36,12 @@ public class NineProcessor implements PageProcessor {
     }
 
     public static void main(String[] args) {
-        Spider.create(new DouBanPageProcessor()).addUrl("https://91porn.com/v.php?category=mf&viewtype=basic&page=1")
+        Spider.create(new DouBanPageProcessor())
+                .addUrl("https://91porn.com/v.php?category=mf&viewtype=basic&page=1")
                 .addPipeline(new JsonFilePipeline("D:\\webmagic\\"))
                 .addPipeline(new ConsolePipeline())
-                .thread(5).run();
+                .thread(5)
+                .run();
 
     }
 }
